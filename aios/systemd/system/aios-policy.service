@@ -1,0 +1,16 @@
+[Unit]
+Description=luminOS Policy Engine
+After=network.target
+
+[Service]
+Type=simple
+Environment=AIOS_RUNTIME_DIR=/run/aios
+Environment=AIOS_STATE_DIR=/var/lib/aios
+Environment=AIOS_CONFIG_DIR=/etc/aios
+ExecStart=/usr/bin/aios-policy
+Restart=on-failure
+RuntimeDirectory=aios
+StateDirectory=aios
+
+[Install]
+WantedBy=multi-user.target

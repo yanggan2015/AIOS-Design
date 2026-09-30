@@ -1,0 +1,15 @@
+[Unit]
+Description=luminOS Agent Supervisor (user session)
+After=aios-dcpd.service
+Wants=aios-dcpd.service
+
+[Service]
+Type=simple
+Environment=AIOS_RUNTIME_DIR=%t/aios
+Environment=AIOS_STATE_DIR=%h/.local/share/aios
+Environment=AIOS_CONFIG_DIR=%h/.config/aios
+ExecStart=/usr/bin/agentd
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

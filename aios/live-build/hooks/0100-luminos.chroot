@@ -1,0 +1,7 @@
+#!/bin/sh
+# live-build hook: enable luminOS user services defaults
+set -e
+mkdir -p /etc/aios /usr/share/luminos
+systemctl enable aios-policy.service || true
+systemctl enable aios-rcpd.service || true
+echo "luminOS live hook ok"

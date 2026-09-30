@@ -1,0 +1,14 @@
+[Unit]
+Description=luminOS Desktop Control Plane (user session)
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=AIOS_RUNTIME_DIR=%t/aios
+Environment=AIOS_STATE_DIR=%h/.local/share/aios
+Environment=AIOS_CONFIG_DIR=%h/.config/aios
+ExecStart=/usr/bin/dcpd
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

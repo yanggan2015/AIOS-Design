@@ -1,0 +1,13 @@
+dist/
+.venv/
+__pycache__/
+*.egg-info/
+*.pyc
+/tmp/
+build/
+*.so
+.pytest_cache/
+node_modules/
+deb-stage/
+wheels/
+*.img

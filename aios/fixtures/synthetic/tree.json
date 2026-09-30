@@ -1,0 +1,38 @@
+{
+  "targets": [
+    {
+      "id": "fixture:settings",
+      "title": "Settings Fixture",
+      "app_id": "org.luminos.fixture.settings",
+      "focused": false,
+      "widgets": [
+        {
+          "id": "s_win",
+          "parent_id": null,
+          "role": "window",
+          "name": "Settings",
+          "text": "Settings",
+          "actions": []
+        },
+        {
+          "id": "s_toggle_wifi",
+          "parent_id": "s_win",
+          "role": "button",
+          "name": "Wi-Fi",
+          "text": "Wi-Fi",
+          "bounds": {"x": 20, "y": 40, "w": 120, "h": 32, "scale": 1},
+          "actions": ["click"]
+        },
+        {
+          "id": "s_status",
+          "parent_id": "s_win",
+          "role": "label",
+          "name": "status",
+          "text": "wifi:on",
+          "bounds": {"x": 20, "y": 80, "w": 200, "h": 24, "scale": 1},
+          "actions": []
+        }
+      ]
+    }
+  ]
+}

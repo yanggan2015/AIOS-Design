@@ -1,0 +1,5 @@
+auto_confirm_max: 1
+allow_remote_confirm: false
+rcp:
+  network: false
+  serial: false

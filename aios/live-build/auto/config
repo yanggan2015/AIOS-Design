@@ -1,0 +1,13 @@
+# luminOS live-build configuration notes (Debian Bookworm amd64)
+# Run on a Debian/Ubuntu builder with live-build installed:
+#   cd live-build && sudo lb config && sudo lb build
+#
+# This tree freezes the intended mirror/distribution/package set for daily ISO.
+
+LB_DISTRIBUTION=bookworm
+LB_ARCHITECTURES=amd64
+LB_BINARY_IMAGES=iso-hybrid
+LB_BOOTLOADER_BIOS=grub-pc
+LB_BOOTLOADER_EFI=grub-efi
+LB_APT_INDICES=true
+LB_DEBIAN_INSTALLER=none

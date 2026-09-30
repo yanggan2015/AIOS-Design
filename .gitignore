@@ -11,3 +11,11 @@ Thumbs.db
 .env
 *.pem
 *.key
+
+# aios build artifacts
+aios/.venv/
+aios/dist/
+aios/**/__pycache__/
+aios/**/*.egg-info/
+aios/.pytest_cache/
+aios/widget_mirror/**/*.so

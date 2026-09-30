@@ -1,0 +1,10 @@
+{
+  "name": "@luminos/aios-rcp",
+  "version": "0.1.0",
+  "description": "luminOS RCP codec (TypeScript)",
+  "main": "src/rcp.ts",
+  "type": "module",
+  "scripts": {
+    "test": "node --input-type=module -e \"import { encodeFrame, MsgId } from './src/rcp.ts'; console.log(encodeFrame({msgId:MsgId.PING,seq:1,payload:{}}).length)\""
+  }
+}

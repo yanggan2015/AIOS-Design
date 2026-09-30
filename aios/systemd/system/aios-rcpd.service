@@ -1,0 +1,16 @@
+[Unit]
+Description=luminOS RCP Daemon
+After=aios-policy.service
+Wants=aios-policy.service
+
+[Service]
+Type=simple
+Environment=AIOS_RUNTIME_DIR=/run/aios
+Environment=AIOS_STATE_DIR=/var/lib/aios
+Environment=AIOS_CONFIG_DIR=/etc/aios
+Environment=AIOS_RCP_LOOPBACK=1
+ExecStart=/usr/bin/rcpd --host 127.0.0.1 --port 17420
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

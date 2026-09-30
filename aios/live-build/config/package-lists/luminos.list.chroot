@@ -1,0 +1,15 @@
+luminos-aios
+systemd
+network-manager
+pipewire
+dbus-user-session
+at-spi2-core
+libgtk-3-0
+python3
+python3-gi
+python3-dbus
+flatpak
+firefox-esr
+gnome-terminal
+nautilus
+calamares

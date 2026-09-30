@@ -1,0 +1,10 @@
+# GTK Hello profile — anchors for Mode-A
+app_id: org.luminos.fixture.hello
+dcp_grade: A
+anchors:
+  - role: button
+    name: OK
+  - role: entry
+    name: input
+  - role: button
+    name: Send

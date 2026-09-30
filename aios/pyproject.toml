@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luminos-aios"
+version = "0.1.0"
+description = "luminOS AI Operating System — core services, DCP, Agent, RCP"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [{ name = "luminOS Team" }]
+dependencies = [
+  "aiohttp>=3.8",
+  "cbor2>=5.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.21"]
+
+[project.scripts]
+aios = "aios_cli.main:main"
+dcpd = "aios_dcpd.main:main"
+agentd = "aios_agentd.main:main"
+ai-engined = "aios_ai_engined.main:main"
+aios-policy = "aios_policy.main:main"
+rcpd = "aios_rcpd.main:main"
+aios-gateway = "aios_gateway.main:main"
+aios-scheduler = "aios_scheduler.main:main"
+aios-store = "aios_store.main:main"
+rcp-dump = "aios_cli.rcp_dump:main"
+
+[tool.setuptools.packages.find]
+where = ["libs/aios_common", "services/policy", "services/dcpd", "services/agentd", "services/ai_engined", "services/gateway", "services/rcpd", "services/scheduler", "services/store", "cli", "sdk/python"]
+include = ["aios_common*", "aios_policy*", "aios_dcpd*", "aios_agentd*", "aios_ai_engined*", "aios_gateway*", "aios_rcpd*", "aios_scheduler*", "aios_store*", "aios_cli*", "aios*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = [
+  "libs/aios_common",
+  "services/policy",
+  "services/dcpd",
+  "services/agentd",
+  "services/ai_engined",
+  "services/gateway",
+  "services/rcpd",
+  "services/scheduler",
+  "services/store",
+  "cli",
+  "sdk/python",
+]
